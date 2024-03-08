@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "PrimalChat", "PrimalChat\PrimalChat.njsproj", "{EA43A939-69A6-4ADC-B125-D8E408D3ABED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA43A939-69A6-4ADC-B125-D8E408D3ABED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA43A939-69A6-4ADC-B125-D8E408D3ABED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA43A939-69A6-4ADC-B125-D8E408D3ABED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA43A939-69A6-4ADC-B125-D8E408D3ABED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FED53A12-279A-449C-A37C-D75BD3E45B3D}
+	EndGlobalSection
+EndGlobal

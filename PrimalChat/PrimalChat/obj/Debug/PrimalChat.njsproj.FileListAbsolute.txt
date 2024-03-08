@@ -1,0 +1,3 @@
+D:\StreamBots\PrimalChat\PrimalChat\obj\Debug\PrimalChat.njsproj.AssemblyReference.cache
+D:\StreamBots\PrimalChat\PrimalChat\obj\Debug\PrimalChat.njsproj.CoreCompileInputs.cache
+D:\StreamBots\PrimalChat\PrimalChat\bin\Microsoft.NodejsTools.WebRole.dll
