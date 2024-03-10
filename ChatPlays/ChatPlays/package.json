@@ -1,0 +1,14 @@
+{
+  "name": "chat-plays",
+  "version": "0.0.0",
+  "description": "ChatPlays",
+  "main": "ChatPlays.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "eslintConfig": {},
+  "type": "module"
+}

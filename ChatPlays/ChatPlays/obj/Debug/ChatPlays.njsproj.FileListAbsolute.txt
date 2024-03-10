@@ -1,0 +1,3 @@
+D:\StreamBots\ChatPlays\ChatPlays\obj\Debug\ChatPlays.njsproj.AssemblyReference.cache
+D:\StreamBots\ChatPlays\ChatPlays\obj\Debug\ChatPlays.njsproj.CoreCompileInputs.cache
+D:\StreamBots\ChatPlays\ChatPlays\bin\Microsoft.NodejsTools.WebRole.dll
