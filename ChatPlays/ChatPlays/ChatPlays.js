@@ -7,10 +7,17 @@ import readline from 'readline';
 import tmi from 'tmi.js';
 import keypress from 'keypress';
 import robot from 'robotjs';
-import overlord from './Overlord.js';
+import axios from 'axios';
 
-const config = JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)),
-    'config.json')));
+
+import { getTwitchAuth } from './API/Overlord.js';
+
+
+
+const config = JSON.parse(fs.readFileSync(path.join(
+    path.dirname(fileURLToPath(import.meta.url)),
+    'config.json'
+)));
 
 const auth_file = path.join(
     path.dirname(fileURLToPath(import.meta.url)),
@@ -18,16 +25,9 @@ const auth_file = path.join(
 );
 
 let auth_data = {};
+let broadcast_data = {};
 
-
-let clientId = "lq1tzm68ep4qvipym40apgizf45sr6";
-let clientSecret = "22i9hawqpws4s4k3q99via9vtywbr0";
-let accessToken = 'txv229z4k0e9x7fdxhurphs0t1proo'
-
-let broadcast_id = '';
 let authorization = '';
-
-let auth_data = {};
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -37,8 +37,8 @@ const rl = readline.createInterface({
 // Define configuration options
 const opts = {
     identity: {
-        username: 'primalchatplays',
-        password: 'oauth:kvw8io034awi4o6333dxrlf7k363ir'
+        username: config.username,
+        password: config.password
     },
     channels: [
         'xzeroprimex'
@@ -62,75 +62,24 @@ async function onMessageHandler(target, context, msg, self) {
     // Remove whitespace from chat message
     const commandName = msg.trim();
 
-    switch (commandName.charAt(0)) {
+    if (commandName.charAt(0)) {
         case '!':
 
-            if (commandName == '!quicksave') {
-                simulateKeyPress('f5');
-                console.log(`Quick saving game at: ${new Date().toLocaleDateString()}`);
-            } else if (commandName == '!quickload') {
-                simulateKeyPress('f8');
-                console.log(`Quick loading game at: ${new Date().toLocaleDateString()}`);
-            }
-
-            break;
-
-        case '~':
-
-            switch (commandName) {
-                case '~w':
-                    moveCharacter('w');
-                    break;
-                case '~a':
-                    moveCharacter('a');
-                    break;
-                case '~s':
-                    moveCharacter('s');
-                    break;
-                case '~d':
-                    moveCharacter('d');
-                    break;
-                case '~mouseup':
-                    moveMouse('up')
-                    break;
-                case '~mouseleft':
-                    moveMouse('left')
-                    break;
-                case '~mousedown':
-                    moveMouse('down')
-                    break;
-                case '~mouseright':
-                    moveMouse('right')
-                    break;
-
-                default:
-                    break;
-            }
-            break;
-
-        //default error catching
-        default:
-
-            break;
-    }
 }
 
 // Called every time the bot connects to Twitch chat
 async function onConnectedHandler(addr, port) {
     console.log(`* Connected to ${addr}:${port}`);
+}
 
-    //get authorization data
-    await getTwitchAuth();
-    
-     //get broadcasting data
-    await getBoradcastingId();
-  
+startBot();
 
-
+async function startBot() {
+    auth_data = await getTwitchAuth(config.client_id, config.client_secret);
+    authorization = `Bearer ${auth_data.access_token}`;
     declareArival();
 
 }
-
     
 
 function moveCharacter(key, _duration = 1000) {
@@ -173,99 +122,30 @@ process.stdin.on('keypress', (ch, key) => {
     }
 });
 
-
-async function getTwitchAuth() {
-
-    rl.question('Code> ', async (code) => {
-        let resp = await fetch(
-            "https://id.twitch.tv/oauth2/token",
-            {
-                method: "POST",
-                "headers": {
-                    "Accept": "application/json"
-                },
-                "body": new URLSearchParams([
-                    ["client_id", config.client_id],
-                    ["client_secret", config.client_secret],
-                    ["code", code],
-                    ["grant_type", "authorization_code"],
-                    ["redirect_uri", config.redirect_uri]
-                ])
-            }
-        );
-
-        if (resp.status != 200) {
-            console.error('An Error occured', await resp.text());
-            //process.exit();
-        }
-
-        console.log('OAuth', resp.status, await resp.json());
-
-
-        auth_data = await resp.json();
-        auth_data = JSON.parse(auth_data);
-
-        authorization = `Bearer ${auth_data.access_token}`;
-
-        return;
-    });
-}
-
-async function getBoradcastingId() {
-    let url = "https://api.twitch.tv/helix/users?login=xzeroprimex";
-
-    let headers = {
-        Authorization: authorization,
-        'Client-ID': clientId
-    };
-
-    let resp = await fetch(url, {
-        headers,
-    })
-    console.log('user', resp.status, await resp.json());
-    handleBraoadcastId(resp);
-}
-
-async function handleAuth(data) {
-    let { access_token, expires_in, token_type } = data;
-    //token_type first letter must be uppercase    
-    token_type =
-        token_type.substring(0, 1).toUpperCase() +
-        token_type.substring(1, token_type.length);
-    authorization = `${token_type} ${access_token}`;
-
-    console.log(`${authorization}`);
-}
-
-function handleBraoadcastId(data) {
-    let { id, login, display_name, type, broadcaster_type, description, profile_image_url, offline_image_url, view_count, email, created_at } = data;
-    broadcast_id = id;
-    console.log(`${display_name}`);
-}
-
 async function declareArival() {
-    const endpoint = `https://api.twitch.tv/helix/chat/announcments?broadcaster_id=${broadcast_id}&moderator_i=${broadcast_id}`;
+
+    const endpoint = `https://api.twitch.tv/helix/chat/announcements`;
+
 
     let headers = {
-        authorization,
-        "Client-Id": clientId,
+        "authorization": config.bot_access_token,
+        "Client-Id": config.client_id,
         "Content-Type": 'application/json',
     }
 
-    let data = {
-        "Message": 'ChatPlays bot is live, remember to read the rules!',
-        "Color": "purple",
+    let msgdata = {
+        "broadcaster_id": config.broadcast_id,
+        "moderator_id": config.bot_id,
+        "message": 'ChatPlays bot is live, remember to read the rules!',
+        "color": "purple",
     }
 
-    fetch(endpoint, {
-        headers, data,
-    })
-        .then((res) => res.json())
-        .then((data) => verifyMessage(data));
 
 
-}
-
-function verifyMessage(data) {
-    console.log(`Message sent`);
+    try {
+        await axios.post(endpoint, msgdata, { headers });
+        console.log("Twitch announcment sent sucessfuly");
+    } catch (error) {
+        console.error("Error sending Twitch announcement:", error.response.data);
+    }
 }

@@ -28,6 +28,12 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="ChatCommands\Commands.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="ChatParser.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="ChatPlays.js" />
     <Content Include="config.json">
       <SubType>Code</SubType>
@@ -35,11 +41,15 @@
     <Content Include="index.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Overlord.js">
+    <Content Include="API\Overlord.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\" />
+    <Folder Include="ChatCommands\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
