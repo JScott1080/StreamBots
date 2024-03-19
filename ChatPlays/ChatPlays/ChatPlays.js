@@ -9,9 +9,8 @@ import keypress from 'keypress';
 import robot from 'robotjs';
 import axios from 'axios';
 
-
 import { getTwitchAuth } from './API/Overlord.js';
-
+import { gameCommands } from './ChatCommands/GameCommander.js';
 
 
 const config = JSON.parse(fs.readFileSync(path.join(
@@ -58,12 +57,7 @@ client.connect();
 // Called every time a message comes in
 async function onMessageHandler(target, context, msg, self) {
     if (self) { return; } // Ignore messages from the bot
-
-    // Remove whitespace from chat message
-    const commandName = msg.trim();
-
-    if (commandName.charAt(0)) {
-        case '!':
+    
 
 }
 
@@ -78,49 +72,9 @@ async function startBot() {
     auth_data = await getTwitchAuth(config.client_id, config.client_secret);
     authorization = `Bearer ${auth_data.access_token}`;
     declareArival();
-
+    gameCommands('sil');
 }
     
-
-function moveCharacter(key, _duration = 1000) {
-    robot.keyToggle(key, 'down');
-    setTimeout(function () { robot.keyToggle(key, 'up'); }, _duration);
-}
-
-function moveMouse(direction, _distance = 100){
-    var mouse = robot.getMousePos();
-    switch (direction) {
-        case 'right':
-            robot.moveMouseSmooth(mouse.x+_distance, mouse.y);
-            break;
-        case 'left':
-            robot.moveMouseSmooth(mouse.x-_distance, mouse.y);
-            break;
-        case 'up':
-            robot.moveMouseSmooth(mouse.x, mouse.y-_distance);
-            break;
-        case 'down':
-            robot.moveMouseSmooth(mouse.x, mouse.y+_distance);
-            break;
-        default:
-            break;
-    }
-}
-
-
-function simulateKeyPress(key) {
-    // Use robot to simulate key presses
-    robot.keyTap(key);
-    console.log(`Simulating key : ${key}`);
-}
-
-keypress(process.stdin);
-
-process.stdin.on('keypress', (ch, key) => {
-    if (key && key.name === 'escape') {
-        process.stdin.pause();
-    }
-});
 
 async function declareArival() {
 

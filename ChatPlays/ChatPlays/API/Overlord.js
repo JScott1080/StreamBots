@@ -1,9 +1,7 @@
 export default {}
 
-export function initTwitchConnections()
-{
+let BannedUseres = {}
 
-}
 
 export async function getTwitchAuth(client_id, client_secret) {
 
@@ -25,7 +23,7 @@ export async function getTwitchAuth(client_id, client_secret) {
 
 }
 
-export async function getBoradcastingId() {
+async function getBoradcastingId(authorization, config) {
     let url = "https://api.twitch.tv/helix/users?login=primalchatplays";
 
     let headers = {
@@ -43,5 +41,3 @@ export async function getBoradcastingId() {
 
     return `${broadcast_data[0]["id"]}`;
 }
-
-

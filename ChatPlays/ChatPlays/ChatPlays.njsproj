@@ -28,9 +28,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="ChatCommands\Commands.js">
+    <Content Include="ChatCommands\AdminCommands.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="ChatCommands\GameCommander.js" />
     <Content Include="ChatParser.js">
       <SubType>Code</SubType>
     </Content>
