@@ -23,17 +23,33 @@ export async function getTwitchAuth(client_id, client_secret) {
 
 }
 
+export async function GetModerators(authorization, config){
+
+    let endpoint = `https://api.twitch.tv/helix/moderation/moderators?broadcaster_id=${config.broadcast_id}`;
+
+    let headers = {
+        Authorization: config.bot_access_token,
+        'Client-Id': config.client_id
+    };
+
+    let resp = await fetch(endpoint, {
+        headers,
+    });
+
+    return await resp.json();
+}
+
 async function getBoradcastingId(authorization, config) {
-    let url = "https://api.twitch.tv/helix/users?login=primalchatplays";
+    let endpoint = "https://api.twitch.tv/helix/users?login=primalchatplays";
 
     let headers = {
         Authorization: authorization,
         'Client-ID': config.client_id
     };
 
-    let resp = await fetch(url, {
+    let resp = await fetch(endpoint, {
         headers,
-    })
+    });
 
     broadcast_data = await resp.json();
 

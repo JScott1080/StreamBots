@@ -24,7 +24,7 @@ export async function gameCommands(key) {
         case 'mri':
             robot.moveMouseSmooth(mouse.x + _distance, mouse.y);
             break;
-        case 'z' || 'v' || 'x' || 'f' || 'r' || 'u' || 'n' || 'i' || 'k' || 'b' || 'l' || 'j' || 'm' || 'p' || 'h':
+        case 'z' || 'v' || 'x' || 'f' || 'r' || 'u' || 'n' || 'i' || 'k' || 'b' || 'l' || 'j' || 'm' || 'p' || 'h' || 'y' || 'g':
             robot.keyTap(key);
             break;
         case 'ttc':
@@ -59,35 +59,118 @@ export async function gameCommands(key) {
             robot.keyTap('2', 'shift');
             break;
         case 'ssc':
-        case 'pmc':
+            robot.keyTap('shift');
+            break;
+        case 'pma' || 'et':
+            robot.keyTap('alt');
+            break;
         case 'tgh':
+            robot.keyTap('c', 'shift');
+            break;
         case 'th':
+            robot.keyTap('c');
+            break;
+        case 'jump':
+            robot.keyTap('z');
+            break;
+        case 'shove':
+            robot.keyTap('v');
+            break;
+        case 'throw':
+            robot.keyTap('x');
+            break;
         case 'tc':
-        case 'end':
-        case 'tbm':
+            robot.keyTap('shift');
+            break;
+        case 'tws':
+            robot.keyTap('f');
+            break;
+        case 'tdw':
+            robot.keyTap('r');
+            break;
+        case 'suw':
+            robot.keyTap('u');
+            break;
+        case 'end' || 'cet' || 'skip' || 'ta':
+            robot.keyTap('space');
+            break;
+        case 'tbm' || 'run':
+            robot.keyTap('space', 'shift');
+            break;
         case 'sr':
-        case 'run':
+            robot.keyTap('y');
+            break;
+        case 'tgm':
+            robot.keyTap('g');
+            break;
+        case 'cs':
+            robot.keyTap('n');
+            break;
+        case 'inv':
+            robot.keyTap('i');
+            break;
         case 'pv':
+            robot.keyTap(';');
+            break;
+        case 'sb':
+            robot.keyTap('k');
+            break;
+        case 'ip':
+            robot.keyTap('b');
+            break;
+        case 'reac':
+            robot.keyTap('l');
+            break;
+        case 'journal':
+            robot.keyTap('j');
+            break;
+        case 'map':
+            robot.keyTap('m');
+            break;
+        case 'ins':
+            robot.keyTap('p');
+            break;
+        case 'alch':
+            robot.keyTap('h');
+            break;
         case 'quicksave':
             robot.keyTap('f5');
             break;
         case 'quickload':
             robot.keyTap('f8');
             break;
-        case 'rmb':
-        case 'ca':
+        case 'rmb' || 'cm' || 'ca':
+            robot.mouseClick('right');
+            break;
         case 'cw':
-        case 'et':
+            robot.keyTap('"');
+            break;
         case 'ept':
-        case 'skip':
-        case 'ta':
+            robot.keyTap('t');
+            break;
         case 'cp1':
+            robot.keyTap('1', 'alt');
+            break;
         case 'cp2':
+            robot.keyTap('2', 'alt');
+            break;
         case 'cp3':
+            robot.keyTap('3', 'alt');
+            break;
         case 'cp4':
+            robot.keyTap('4', 'alt');
+            break;
         case 'snc':
+            robot.keyTap(']');
+            break;
         case 'spc':
+            robot.keyTap('[');
+            break;
         case 'ui':
+            robot.keyTap('f10');
+            break;
+        default:
+            break;
     };
 
 }

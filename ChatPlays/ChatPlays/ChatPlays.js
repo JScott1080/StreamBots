@@ -2,14 +2,12 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath, URL }  from 'url';
-import fetch from 'node-fetch';
+
 import readline from 'readline';
 import tmi from 'tmi.js';
-import keypress from 'keypress';
-import robot from 'robotjs';
 import axios from 'axios';
-
-import { getTwitchAuth } from './API/Overlord.js';
+import { parseCommand } from './ChatParser.js';
+import { getTwitchAuth, GetModerators } from './API/Overlord.js';
 import { gameCommands } from './ChatCommands/GameCommander.js';
 
 
@@ -24,7 +22,7 @@ const auth_file = path.join(
 );
 
 let auth_data = {};
-let broadcast_data = {};
+let mods = {};
 
 let authorization = '';
 
@@ -57,9 +55,13 @@ client.connect();
 // Called every time a message comes in
 async function onMessageHandler(target, context, msg, self) {
     if (self) { return; } // Ignore messages from the bot
-    
+        
+    console.log(target);
+
 
 }
+
+
 
 // Called every time the bot connects to Twitch chat
 async function onConnectedHandler(addr, port) {
@@ -72,6 +74,9 @@ async function startBot() {
     auth_data = await getTwitchAuth(config.client_id, config.client_secret);
     authorization = `Bearer ${auth_data.access_token}`;
     declareArival();
+    mods = await GetModerators(authorization, config);
+    console.log(mods);
+
     gameCommands('sil');
 }
     
