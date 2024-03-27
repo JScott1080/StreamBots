@@ -1,7 +1,11 @@
 
 
-export async function parseCommand(command) {
+export async function ParseAdminCmd(command) {
 
 
 
 } 
+
+export async function parseGameCmd(command) {
+
+}

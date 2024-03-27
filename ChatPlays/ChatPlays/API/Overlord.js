@@ -28,7 +28,7 @@ export async function GetModerators(authorization, config){
     let endpoint = `https://api.twitch.tv/helix/moderation/moderators?broadcaster_id=${config.broadcast_id}`;
 
     let headers = {
-        Authorization: config.bot_access_token,
+        Authorization: config.access_token,
         'Client-Id': config.client_id
     };
 

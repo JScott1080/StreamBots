@@ -6,10 +6,9 @@ import { fileURLToPath, URL }  from 'url';
 import readline from 'readline';
 import tmi from 'tmi.js';
 import axios from 'axios';
-import { parseCommand } from './ChatParser.js';
+import { parseAdminCmd, parseGameCmd } from './ChatParser.js';
 import { getTwitchAuth, GetModerators } from './API/Overlord.js';
 import { gameCommands } from './ChatCommands/GameCommander.js';
-
 
 const config = JSON.parse(fs.readFileSync(path.join(
     path.dirname(fileURLToPath(import.meta.url)),
@@ -26,6 +25,9 @@ let mods = {};
 
 let authorization = '';
 
+let voting = false;
+let democracy = false;
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -38,7 +40,7 @@ const opts = {
         password: config.password
     },
     channels: [
-        'xzeroprimex'
+        config.channelName
     ]
 };
 
@@ -54,11 +56,31 @@ client.connect();
 
 // Called every time a message comes in
 async function onMessageHandler(target, context, msg, self) {
-    if (self) { return; } // Ignore messages from the bot
-        
-    console.log(target);
+    if (self) { return; } // Ignore messages from the bot c
 
+    const command = msg.toLowerCase();
 
+    switch (command.charAt(0)) {
+
+        case '~':
+            if (isMod(context.username) || context.username == config.channelName) {
+                parseAdminCmd(command)
+            }
+            break;
+
+        case '!':
+
+            if (voting) {
+                vote(command);
+                break;
+            }
+
+            if (democracy)
+                liberTea(command);
+            else
+                parseGameCmd(msg);
+            break;
+    }
 }
 
 
@@ -107,4 +129,32 @@ async function declareArival() {
     } catch (error) {
         console.error("Error sending Twitch announcement:", error.response.data);
     }
+}
+
+async function isMod(User) {
+
+    for (const ids in mods) {
+        if (ids.user_name == `#` + User)
+            return true;
+    }
+    return false;
+}
+
+function votingStart() {
+    //pause commands
+}
+
+function votingEnd() {
+
+}
+
+async function vote(message) {
+    //to;do determing how the game will be played, via liberTea() or anarchy
+
+
+
+}
+
+async function liberTea(message) {
+    //to;do create a system to take the last x commands and then parse the most common one.
 }
