@@ -1,0 +1,15 @@
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\bin\Debug\net8.0\BG3_Watchdog.exe
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\bin\Debug\net8.0\BG3_Watchdog.deps.json
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\bin\Debug\net8.0\BG3_Watchdog.runtimeconfig.json
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\bin\Debug\net8.0\BG3_Watchdog.dll
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\bin\Debug\net8.0\BG3_Watchdog.pdb
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.GeneratedMSBuildEditorConfig.editorconfig
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.AssemblyInfoInputs.cache
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.AssemblyInfo.cs
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.csproj.CoreCompileInputs.cache
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.sourcelink.json
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.dll
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\refint\BG3_Watchdog.dll
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.pdb
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\BG3_Watchdog.genruntimeconfig.cache
+D:\StreamBots\BG3_Watchdog\BG3_Watchdog\obj\Debug\net8.0\ref\BG3_Watchdog.dll

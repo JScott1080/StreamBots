@@ -7,6 +7,7 @@ export const commandMarkers = [
 
 export async function gameCommands(key) {
 
+    console.log(`Command ${key} recieved, executing`)
     switch (key) {
         case 'w' || 'a' || 's' || 'd':
             robot.keyToggle(key, 'down');
@@ -170,9 +171,9 @@ export async function gameCommands(key) {
             robot.keyTap('f10');
             break;
         default:
+             console.log(`Command not recognized.`)
             break;
     };
-
 }
 
 function moveCharacter(key, _duration = 1000) {

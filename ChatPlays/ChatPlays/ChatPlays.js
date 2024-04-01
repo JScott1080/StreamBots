@@ -9,6 +9,7 @@ import axios from 'axios';
 import { parseAdminCmd, parseGameCmd } from './ChatParser.js';
 import { getTwitchAuth, GetModerators } from './API/Overlord.js';
 import { gameCommands } from './ChatCommands/GameCommander.js';
+import { escape } from 'querystring';
 
 const config = JSON.parse(fs.readFileSync(path.join(
     path.dirname(fileURLToPath(import.meta.url)),
@@ -27,6 +28,7 @@ let authorization = '';
 
 let voting = false;
 let democracy = false;
+let eStop = false;
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -64,21 +66,25 @@ async function onMessageHandler(target, context, msg, self) {
 
         case '~':
             if (isMod(context.username) || context.username == config.channelName) {
-                parseAdminCmd(command)
+                adminCommands(await parseAdminCmd(command));
             }
             break;
 
         case '!':
 
-            if (voting) {
-                vote(command);
+            if (!eStop) {
+
+                if (voting) {
+                    vote(command);
+                    break;
+                }
+
+                if (democracy)
+                    liberTea(command);
+                else
+                    gameCommands(await parseGameCmd(command));
                 break;
             }
-
-            if (democracy)
-                liberTea(command);
-            else
-                parseGameCmd(msg);
             break;
     }
 }
@@ -145,7 +151,7 @@ function votingStart() {
 }
 
 function votingEnd() {
-
+    //switch method and enable game commands
 }
 
 async function vote(message) {
@@ -157,4 +163,26 @@ async function vote(message) {
 
 async function liberTea(message) {
     //to;do create a system to take the last x commands and then parse the most common one.
+}
+
+async function adminCommands(command) {
+
+    switch (command) {
+
+        case 'estop':
+            stopCommands();
+            break;
+        case 'PTTP':
+            resumeCommands();
+            break;
+    }
+}
+
+function stopCommands() {
+    eStop = true; 
+    
+}
+
+function resumeCommands() {
+    eStop = false;
 }
