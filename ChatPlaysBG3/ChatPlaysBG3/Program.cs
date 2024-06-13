@@ -1,13 +1,13 @@
 ﻿using ChatPlaysBG3;
-using System;
-using System.Diagnostics;
-using System.Net.Http.Headers;
-using System.Reflection;
-using System.Threading;
+using ChatPlaysBG3.ChatIRC;
+using ChatPlaysBG3.GameMaster;
+using ChatPlaysBG3.TwitchAPI;
 
 
 class ChatPlays_BG3
 {
+
+
     static void Main(string[] args)
     {
         var mindFlayer = new MindFlayer();
@@ -17,12 +17,11 @@ class ChatPlays_BG3
 class MindFlayer
 {
 
-    private Guardian guardian;
-    private Commander commander;
-    private Overlord overlord;
-    private Paladin paladin;
-    private Archive archive;
-    private String auth;
+    public Guardian guardian;
+    public Commander commander;
+    public Overlord overlord;
+    public Paladin paladin;
+    public Archive archive;
 
     public MindFlayer()
     {
@@ -37,27 +36,27 @@ class MindFlayer
         Console.WriteLine("Connecting to Twitch via Overlord");
         overlord = new Overlord(archive);
         overlord.OnAuthRecieved += verifyOauth;
+       
 
-
-        Console.WriteLine("Waking Paladin for Moderation and Admin");
-        paladin = new Paladin();
+        Console.WriteLine("Waking the Paladin for Moderation and Admin");
+        paladin = new Paladin(archive);
 
         Console.WriteLine("Getting Commander for Twitch chat IRC");
         commander = new Commander(archive);
 
-
+        Thread.Sleep(3000);
+        Console.WriteLine("Lets PLay!!!");
         letsPlay();
     }
 
     private void verifyOauth(object? sender, EventArgs e)
     {
-        Console.WriteLine(archive.Authorization);
     }
 
     public void letsPlay()
     {
         guardian.guardianInit();
-
+        paladin.DeclareArival();
     }
 
     void enableChatPlaysCommands(object? sender, EventArgs e)
@@ -72,4 +71,13 @@ class MindFlayer
     }
 
     
+
+    private static async Task QuestLine()
+    {
+        var alive = true;
+        while (alive)
+        {
+            await Task.Delay(1000);
+        }
+    }
 }

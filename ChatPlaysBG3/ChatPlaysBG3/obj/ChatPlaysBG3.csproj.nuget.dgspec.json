@@ -44,9 +44,25 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "TwitchLib": {
+            "InputSimulator": {
               "target": "Package",
-              "version": "[3.5.3, )"
+              "version": "[1.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SimWinGamePad": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "SimWinKeyboard": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "SimWinMouse": {
+              "target": "Package",
+              "version": "[1.0.2, )"
             }
           },
           "imports": [
