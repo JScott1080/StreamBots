@@ -1,15 +1,15 @@
 {
-  "client_id": "lq1tzm68ep4qvipym40apgizf45sr6",
-  "client_secret": "22i9hawqpws4s4k3q99via9vtywbr0",
+  "client_id": "",
+  "client_secret": "",
   "redirect_url": "http://localhost:3000/",
 
-  "broadcast_id": "89697687",
-  "bot_id": "1048673136",
+  "broadcast_id": "",
+  "bot_id": "",
 
-  "channelName":  "xzeroprimex",
-  "username": "primalchatplays",
-  "password": "oauth:kvw8io034awi4o6333dxrlf7k363ir",
-  "access_token": "Bearer n13h88l1jlvojrwog861xe0c4b5wpd",
-  "bot_access_token": "Bearer wvftr7291h10hgccx1wzdx72gjudi1",
+  "channelName":  "",
+  "username": "",
+  "password": "oauth:",
+  "access_token": "Bearer ",
+  "bot_access_token": "Bearer ",
   "refresh_token": ""
 }
