@@ -2,7 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\ChatPlays",
-    "\\ChatPlays\\ChatPlays"
+    "\\ChatPlaysBG3\\ChatPlaysBG3\\IRC",
+    "\\ChatPlaysBG3\\ChatPlaysBG3\\Twitch",
+    "\\ChatPlays\\ChatPlays",
+    "\\ChatPlays\\ChatPlays\\API",
+    "\\ChatPlays\\ChatPlays\\bin",
+    "\\ChatPlays\\ChatPlays\\ChatCommands"
   ],
+  "SelectedNode": "\\ChatPlays\\ChatPlays\\ChatPlays.js",
   "PreviewInSolutionExplorer": false
 }

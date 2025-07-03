@@ -1,7 +1,7 @@
 // JavaScript source code
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath, URL }  from 'url';
+import { fileURLToPath, parse, URL }  from 'url';
 
 import readline from 'readline';
 import tmi from 'tmi.js';
@@ -9,6 +9,8 @@ import axios from 'axios';
 import { parseAdminCmd, parseGameCmd } from './ChatParser.js';
 import { getTwitchAuth, GetModerators } from './API/Overlord.js';
 import { gameCommands } from './ChatCommands/GameCommander.js';
+import { VotingModeManager } from './VotingModeManager.js';
+
 import { escape } from 'querystring';
 
 const config = JSON.parse(fs.readFileSync(path.join(
@@ -29,6 +31,9 @@ let authorization = '';
 let voting = false;
 let democracy = false;
 let eStop = false;
+
+const modeManager = new VotingModeManager();
+
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -138,31 +143,61 @@ async function declareArival() {
 }
 
 async function isMod(User) {
-
-    for (const ids in mods) {
-        if (ids.user_name == `#` + User)
-            return true;
+    for (const id of Object.values(mods)) {
+        if (id.user_name == User) return true;
     }
-    return false;
 }
 
 function votingStart() {
-    //pause commands
+    stopCommands();
+    modeManager.resetVotes();
+    voting = true;
+    console.log("Voting session started.");
 }
 
 function votingEnd() {
-    //switch method and enable game commands
+    voting = false;
+    const winner = modeManager.determineWinner();
+    democracy = winner === 'democracy';
+    client.say(config.channelName, `Voting complete! New mode: ${winner.toUpperCase()}`);
 }
 
 async function vote(message) {
-    //to;do determing how the game will be played, via liberTea() or anarchy
+    const mode = message.toLowerCase();
 
-
-
+    if (modeManager.castVote(mode)) {
+        const { democracy, chaos } = modeManager.getVotes();
+        console.log(`${mode} vote logged. Democracy: ${democracy}, Chaos: ${chaos}`);
+        client.say(config.channelName, `Vote for ${mode} received!`);
+    } else {
+        console.log("Invalid vote received:", message);
+    }
 }
 
+let commandCounts = {};
+let batchTimer = null;
+const BATCH_DURATION = 5000;
+
 async function liberTea(message) {
-    //to;do create a system to take the last x commands and then parse the most common one.
+    const parsed = await parseGameCmd(message);
+    if (!parsed) return;
+
+    commandCounts[parsed] = (commandCounts[parsed] || 0) + 1;
+
+    if (!batchTimer) {
+        batchTimer = setTimeout(async () => {
+            const sorted = Object.entries(commandCounts).sort((a, b) => b[1] - a[1]);
+
+            if (sorted.length > 0) {
+                const [mostPopular, count] = sorted[0];
+                console.log('Voted command: ${mostPopular} (${count})');
+                await gameCommands(mostPopular);
+            }
+
+            commandCounts = {};
+            batchTimer = null;
+        }, BATCH_DURATION);
+    }
 }
 
 async function adminCommands(command) {

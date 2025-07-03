@@ -1,34 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\StreamBots\\ChatPlays\\",
+  "WorkspaceRootPath": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatPlays.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|solutionrelative:ChatPlays\\ChatPlays.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|c:\\users\\zerop\\documents\\streambots\\chatplays\\chatplays\\chatcommands\\gamecommander.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|solutionrelative:chatplays\\chatcommands\\gamecommander.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|D:\\StreamBots\\ChatPlays\\ChatPlays\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|solutionrelative:ChatPlays\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|c:\\users\\zerop\\documents\\streambots\\chatplays\\chatplays\\chatplays.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|solutionrelative:chatplays\\chatplays.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatCommands\\GameCommander.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|solutionrelative:ChatPlays\\ChatCommands\\GameCommander.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|c:\\users\\zerop\\documents\\streambots\\chatplays\\chatplays\\api\\overlord.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|solutionrelative:chatplays\\api\\overlord.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|D:\\StreamBots\\ChatPlays\\ChatPlays\\API\\Overlord.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|solutionrelative:ChatPlays\\API\\Overlord.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|c:\\users\\zerop\\documents\\streambots\\chatplays\\chatplays\\votingmodemanager.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|solutionrelative:chatplays\\votingmodemanager.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatParser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|solutionrelative:ChatPlays\\ChatParser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|c:\\users\\zerop\\documents\\streambots\\chatplays\\chatplays\\chatparser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|solutionrelative:chatplays\\chatparser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|D:\\StreamBots\\ChatPlays\\ChatPlays\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|solutionrelative:ChatPlays\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|D:\\StreamBots\\ChatPlays\\ChatPlays\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7CDCA1EA-CF2B-4741-AAE9-028FA40BAD2F}|ChatPlays\\ChatPlays.njsproj|solutionrelative:ChatPlays\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|c:\\users\\zerop\\documents\\streambots\\chatplays\\chatplays\\project_migration_log.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{63FDC443-A748-7773-A8F3-50B1BFE9D23C}|ChatPlays\\ChatPlays.esproj|solutionrelative:chatplays\\project_migration_log.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "config.json",
-              "DocumentMoniker": "D:\\StreamBots\\ChatPlays\\ChatPlays\\config.json",
-              "RelativeDocumentMoniker": "ChatPlays\\config.json",
-              "ToolTip": "D:\\StreamBots\\ChatPlays\\ChatPlays\\config.json",
-              "RelativeToolTip": "ChatPlays\\config.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-21T01:34:36.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChatPlays.js",
-              "DocumentMoniker": "D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatPlays.js",
-              "RelativeDocumentMoniker": "ChatPlays\\ChatPlays.js",
-              "ToolTip": "D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatPlays.js",
-              "RelativeToolTip": "ChatPlays\\ChatPlays.js",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAEMAAAAyAAAA",
+              "DocumentIndex": 3,
+              "Title": "VotingModeManager.js",
+              "DocumentMoniker": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\VotingModeManager.js",
+              "RelativeDocumentMoniker": "ChatPlays\\VotingModeManager.js",
+              "ToolTip": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\VotingModeManager.js",
+              "RelativeToolTip": "ChatPlays\\VotingModeManager.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-11T20:16:55.9Z",
+              "WhenOpened": "2025-07-03T18:44:50.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GameCommander.js",
-              "DocumentMoniker": "D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatCommands\\GameCommander.js",
-              "RelativeDocumentMoniker": "ChatPlays\\ChatCommands\\GameCommander.js",
-              "ToolTip": "D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatCommands\\GameCommander.js",
-              "RelativeToolTip": "ChatPlays\\ChatCommands\\GameCommander.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMIAAAASAAAA",
+              "Title": "Overlord.js",
+              "DocumentMoniker": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\API\\Overlord.js",
+              "RelativeDocumentMoniker": "ChatPlays\\API\\Overlord.js",
+              "ToolTip": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\API\\Overlord.js",
+              "RelativeToolTip": "ChatPlays\\API\\Overlord.js",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-11T19:51:00.309Z",
+              "WhenOpened": "2025-07-03T18:26:14.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameCommander.js",
+              "DocumentMoniker": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\ChatCommands\\GameCommander.js",
+              "RelativeDocumentMoniker": "ChatPlays\\ChatCommands\\GameCommander.js",
+              "ToolTip": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\ChatCommands\\GameCommander.js",
+              "RelativeToolTip": "ChatPlays\\ChatCommands\\GameCommander.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-03T18:26:10.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ChatParser.js",
-              "DocumentMoniker": "D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatParser.js",
+              "DocumentMoniker": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\ChatParser.js",
               "RelativeDocumentMoniker": "ChatPlays\\ChatParser.js",
-              "ToolTip": "D:\\StreamBots\\ChatPlays\\ChatPlays\\ChatParser.js",
+              "ToolTip": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\ChatParser.js",
               "RelativeToolTip": "ChatPlays\\ChatParser.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-11T18:20:50.459Z",
+              "WhenOpened": "2025-07-03T18:26:06.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Overlord.js",
-              "DocumentMoniker": "D:\\StreamBots\\ChatPlays\\ChatPlays\\API\\Overlord.js",
-              "RelativeDocumentMoniker": "ChatPlays\\API\\Overlord.js",
-              "ToolTip": "D:\\StreamBots\\ChatPlays\\ChatPlays\\API\\Overlord.js",
-              "RelativeToolTip": "ChatPlays\\API\\Overlord.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAuAAAA",
+              "DocumentIndex": 1,
+              "Title": "ChatPlays.js",
+              "DocumentMoniker": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\ChatPlays.js",
+              "RelativeDocumentMoniker": "ChatPlays\\ChatPlays.js",
+              "ToolTip": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\ChatPlays.js",
+              "RelativeToolTip": "ChatPlays\\ChatPlays.js",
+              "ViewState": "AgIAALEAAAAAAAAAAAAcwMYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-09T17:07:49.526Z",
+              "WhenOpened": "2025-07-03T18:24:27.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "README.md",
-              "DocumentMoniker": "D:\\StreamBots\\ChatPlays\\ChatPlays\\README.md",
-              "RelativeDocumentMoniker": "ChatPlays\\README.md",
-              "ToolTip": "D:\\StreamBots\\ChatPlays\\ChatPlays\\README.md",
-              "RelativeToolTip": "ChatPlays\\README.md",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-03-09T16:38:02.475Z",
+              "Title": "PROJECT_MIGRATION_LOG.txt",
+              "DocumentMoniker": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\PROJECT_MIGRATION_LOG.txt",
+              "RelativeDocumentMoniker": "ChatPlays\\PROJECT_MIGRATION_LOG.txt",
+              "ToolTip": "C:\\Users\\zerop\\Documents\\StreamBots\\ChatPlays\\ChatPlays\\PROJECT_MIGRATION_LOG.txt",
+              "RelativeToolTip": "ChatPlays\\PROJECT_MIGRATION_LOG.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-03T18:24:14.487Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "package.json",
-              "DocumentMoniker": "D:\\StreamBots\\ChatPlays\\ChatPlays\\package.json",
-              "RelativeDocumentMoniker": "ChatPlays\\package.json",
-              "ToolTip": "D:\\StreamBots\\ChatPlays\\ChatPlays\\package.json",
-              "RelativeToolTip": "ChatPlays\\package.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-09T16:38:00.614Z"
             }
           ]
         }
